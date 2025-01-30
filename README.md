@@ -1,4 +1,4 @@
-![Falat Labs Logo](https://github.com/falatfernando/falatfernando.github.io/blob/main/images/logo.png?raw=true)
+<img src="https://github.com/falatfernando/falatfernando.github.io/blob/main/images/logo.png?raw=true" alt="Falat Labs Logo" style="width:120px;">
 
 # GenDex - Genomic Hub
 
@@ -40,5 +40,5 @@ Developed as part of ongoing bioinformatics research, this hub aims to bridge ra
 
 ---
 
-**From Brazil, with love ❤️
+**From Brazil, with love** ❤️
 Fernando Falat
