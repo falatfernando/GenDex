@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeneDeX</title>
+    <!-- If using Plotly offline, you can include the script below -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Analysis Hub</h1>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result_data %}
+        <hr>
+        <h2>Results</h2>
+        <p>Sequence Length: {{ result_data.length }}</p>
+        <p>GC Content: {{ result_data.gc_content }}%</p>
+        <p>A Count: {{ result_data.A }}</p>
+        <p>T Count: {{ result_data.T }}</p>
+        <p>G Count: {{ result_data.G }}</p>
+        <p>C Count: {{ result_data.C }}</p>
+
+        <!-- Plotly Chart -->
+        <div>
+            {% if plot_div %}
+                {{ plot_div|safe }}
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

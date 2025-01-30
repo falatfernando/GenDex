@@ -1,0 +1,126 @@
+/* Reset browser margins, set a modern default font */
+body {
+  margin: 0;
+  padding: 0;
+  /* A subtle background color for the page content */
+  background-color: #f3f3f3;
+  /* A modern, sans-serif stack */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #333; /* Dark gray text color */
+}
+
+/* The main header (fixed navbar) */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* White background for the navbar */
+  background-color: #fff;
+  height: 60px; /* or as you prefer */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* A slightly bigger shadow for clearer separation */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  /* Some horizontal padding so the items aren't flush to the edges */
+  padding: 0 1.5rem;
+}
+
+/* Container for logo + text on the left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between logo image and text */
+}
+
+/* Logo image */
+.navbar-logo {
+  height: 40px;
+  align-items: center;
+}
+
+.navbar-logo-name {
+  text-align: center;
+  text-decoration: none;
+  color: #333; 
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* The middle nav items (ul) */
+.navbar-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem; /* Spacing between nav links */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Fancy Middle Links with Hover Effects & Underline --- */
+.navbar-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar-nav li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #008080;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav li a:hover {
+  color: #008080;
+  text-shadow: 0px 0px 8px rgba(0, 119, 204, 0.5);
+}
+
+.navbar-nav li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Right side container: login/logout, etc. */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin-right: 2.5%;
+  right: 0; /* Ensures they are within the screen */
+}
+
+/* Login/Signup buttons */
+.btn-login,
+.btn-signup {
+  text-decoration: none;
+  color: #008080;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid #008080;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+  background-color: #008080;
+  color: #fff;
+}
+
+/* Main content: push down so it's not hidden behind the fixed navbar */
+.main-content {
+  margin-top: 70px; /* match the navbar height */
+  padding: 1rem;    /* some breathing room */
+  /* Slightly lighter text background for the main content area, 
+     or leave it the same as body if you prefer. */
+  background-color: #e7e7e7;
+}

@@ -1,13 +1,11 @@
-<img src="https://github.com/falatfernando/falatfernando.github.io/blob/main/images/logo.png?raw=true" alt="Falat Labs Logo" style="width:120px;">
-
-# GenDex - Genomic Hub
+# GeneDex - Genomic Hub
 
 **An Open-Source Platform for Genomic Annotation and Machine Learning Applications**
 
 ---
 
 ## 📖 About
-GenDex is a comprehensive bioinformatics platform combining:
+GeneDex is a comprehensive bioinformatics platform combining:
 - **Genomic Data Annotation** tools
 - **Machine Learning Models** for biological predictions
 - **Collaborative Research** infrastructure

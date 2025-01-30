@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}GeneDex{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- Persistent header (navbar) -->
+  <header class="main-header">
+    <div class="navbar-left">
+      <a href="https://falatfernando.github.io/"><img class = "navbar-logo" src="https://github.com/falatfernando/falatfernando.github.io/blob/main/images/logo.png?raw=true" alt="Falat Labs Logo"</img></a>
+      <a href="/" class="navbar-logo-name">GeneDex</a>
+    </div>
+    <nav class="navbar-nav">
+      <ul>
+        <li><a href="">Exploratory</a></li>
+        <li><a href="">Machine Learning</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <div class="navbar-right">
+      {% if user.is_authenticated %}
+        <span>Hi, {{ user.username }}!</span>
+        <a href="" class="btn-logout">Sign out</a>
+      {% else %}
+        <a href="" class="btn-login">Sign in</a>
+        <a href="" class="btn-signup">Sign up</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- The main body container, with top margin to avoid overlap -->
+  <div class="main-content">
+    {% block content %}
+    <!-- Child templates insert their content here -->
+    {% endblock %}
+  </div>
+</body>
+</html>
